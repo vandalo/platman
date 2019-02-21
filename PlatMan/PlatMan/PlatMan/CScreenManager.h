@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-#include <stack>
+#include <list>
 
 #include "IModule.h"
 
@@ -26,5 +26,9 @@ public:
 
 public:
 	CModuleFadeToBlack& m_moduleFadeToBlack;
-	std::stack<IModuleScreen*> m_stackScreen;
+	std::list<IModuleScreen*> m_listScreen;
+
+private:
+	IModuleScreen* m_screenIn;
+	IModuleScreen* m_screenOut;
 };

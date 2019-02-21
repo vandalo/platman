@@ -5,6 +5,7 @@
 #include "CModuleTexture.h"
 #include "CModuleRender.h"
 #include "CScreenManager.h"
+#include "CLevelTestScreen.h"
 
 CFlashScreen::CFlashScreen(ScreenType screenType) :
 	IModuleScreen(screenType)
@@ -30,8 +31,9 @@ bool CFlashScreen::Update(float deltaTime)
 
 	if (m_moduleInput.GetKey(SDL_SCANCODE_RETURN) == KEY_DOWN)
 	{
-		CFlashScreen* flashScreen = new CFlashScreen(SCREEN);
-		m_screenManager.AddScreen(flashScreen);
+		CLevelTestScreen* levelTestScreen = new CLevelTestScreen(SCREEN);
+		//CFlashScreen* levelTestScreen = new CFlashScreen(SCREEN);
+		m_screenManager.AddScreen(levelTestScreen);
 	}
 	return true;
 }

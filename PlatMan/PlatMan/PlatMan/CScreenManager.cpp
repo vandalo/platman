@@ -21,11 +21,28 @@ bool CScreenManager::Init()
 
 bool CScreenManager::Update(const float deltaTime)
 {
-	if (!m_stackScreen.empty())
+	if (!m_listScreen.empty())
 	{
-		m_stackScreen.top()->Update(deltaTime);
+		for (IModuleScreen* screen : m_listScreen)
+		{
+			screen->Update(deltaTime);
+		}
 	}
-	return false;
+
+	if (m_moduleFadeToBlack.isFading())
+	{
+		if (m_screenOut)
+		{
+			if (!m_screenOut->IsEnabled())
+			{
+				delete m_screenOut;
+				m_listScreen.pop_back();
+				m_listScreen.push_back(m_screenIn);
+			}
+		}		
+	}
+
+	return true;
 }
 
 bool CScreenManager::CleanUp()
@@ -35,16 +52,19 @@ bool CScreenManager::CleanUp()
 
 void CScreenManager::AddScreen(IModuleScreen * screen)
 {
-	if (screen->GetScreenType() == ScreenType::SCREEN && !m_stackScreen.empty() && !m_moduleFadeToBlack.isFading())
+	if (screen->GetScreenType() == ScreenType::SCREEN && !m_moduleFadeToBlack.isFading() && !m_listScreen.empty())
 	{
-		while (m_stackScreen.size() > 1)
+		while (m_listScreen.size() > 1)
 		{
-			delete m_stackScreen.top();
-			m_stackScreen.pop();
+			delete m_listScreen.back();
+			m_listScreen.pop_back();
 		}
-		m_moduleFadeToBlack.FadeToBlack(screen, m_stackScreen.top(), 3.0);
-		delete m_stackScreen.top();
-		m_stackScreen.pop();
+		m_screenOut = m_listScreen.empty() ? nullptr : m_listScreen.front();
+		m_screenIn = screen;
+		m_moduleFadeToBlack.FadeToBlack(screen, m_screenOut, 3.0);
 	}
-	m_stackScreen.push(screen);
+	else
+	{
+		m_listScreen.push_back(screen);
+	}
 }
