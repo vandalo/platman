@@ -9,12 +9,13 @@
 #include "SDL/include/SDL.h"
 
 class IModuleScreen;
+class CModuleFadeToBlack;
 
-class CScreanManager
+class CScreenManager
 {
 public:
-	CScreanManager();
-	~CScreanManager();
+	CScreenManager();
+	~CScreenManager();
 
 	bool Init();
 	bool Update(const float deltaTime);
@@ -24,5 +25,6 @@ public:
 
 
 public:
+	CModuleFadeToBlack& m_moduleFadeToBlack;
 	std::stack<IModuleScreen*> m_stackScreen;
 };

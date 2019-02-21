@@ -3,8 +3,11 @@
 #include "pch.h"
 
 #include "IModule.h"
+#include "CModuleInput.h"
+#include "CScreenManager.h"
 
 #include "SDL/include/SDL.h"
+
 
 enum ScreenType
 {
@@ -16,7 +19,10 @@ class IModuleScreen : public IModule
 {
 
 public:
-	IModuleScreen(ScreenType screenType) : m_screenType(screenType) {};
+	IModuleScreen(ScreenType screenType) : m_screenType(screenType)
+	, m_moduleInput(*App->GetModule<CModuleInput>())
+	, m_screenManager(*App->GetScreenManager()) {};
+
 	~IModuleScreen() {};
 
 	bool Init() override { return true; };
@@ -27,6 +33,8 @@ public:
 
 public:
 
-private:
+protected:
+	CModuleInput& m_moduleInput;
+	CScreenManager& m_screenManager;
 	ScreenType m_screenType;
 };

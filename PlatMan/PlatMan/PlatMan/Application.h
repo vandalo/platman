@@ -5,7 +5,7 @@
 #include <time.h>
 
 #include "IModule.h"
-#include "CScreanManager.h"
+#include "CScreenManager.h"
 
 class Application
 {
@@ -15,6 +15,8 @@ public:
 	bool Init();
 	bool Update();
 	bool CleanUp();
+
+	CScreenManager* GetScreenManager() { return m_screanManager; }
 
 	template<typename T>
 	T* Add()
@@ -42,7 +44,7 @@ public:
 
 private:
 	std::unordered_map<std::size_t, std::unique_ptr<IModule>> m_modules;
-	CScreanManager* m_screanManager;
+	CScreenManager* m_screanManager;
 
 	clock_t timer;
 	float deltaTime;

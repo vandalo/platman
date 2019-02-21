@@ -4,6 +4,7 @@
 #include "CFlashScreen.h"
 #include "CModuleTexture.h"
 #include "CModuleRender.h"
+#include "CScreenManager.h"
 
 CFlashScreen::CFlashScreen(ScreenType screenType) :
 	IModuleScreen(screenType)
@@ -26,6 +27,12 @@ bool CFlashScreen::Init()
 bool CFlashScreen::Update(float deltaTime)
 {
 	m_moduleRender.Blit(m_background, 0, 0);
+
+	if (m_moduleInput.GetKey(SDL_SCANCODE_RETURN) == KEY_DOWN)
+	{
+		CFlashScreen* flashScreen = new CFlashScreen(SCREEN);
+		m_screenManager.AddScreen(flashScreen);
+	}
 	return true;
 }
 

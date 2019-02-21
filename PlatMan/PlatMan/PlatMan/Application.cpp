@@ -8,6 +8,7 @@
 #include "CModuleRender.h"
 #include "CModuleTexture.h"
 #include "CFlashScreen.h"
+#include "CModuleFadeToBlack.h"
 
 Application::Application()
 {
@@ -31,7 +32,10 @@ bool Application::Init()
 	CModuleTexture* moduleTexture = Add<CModuleTexture>();
 	moduleTexture->Init();
 
-	m_screanManager = new CScreanManager();
+	CModuleFadeToBlack* moduleFadeToBlack = Add<CModuleFadeToBlack>();
+	moduleFadeToBlack->Init();
+
+	m_screanManager = new CScreenManager();
 
 	bool ret = true;
 
