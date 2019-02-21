@@ -114,10 +114,10 @@ bool CModuleInput::PreUpdate(float deltaTime)
 			break;
 
 		case SDL_MOUSEMOTION:
-			/*mouse_motion.x = event.motion.xrel / SCREEN_SIZE;
+			mouse_motion.x = event.motion.xrel / SCREEN_SIZE;
 			mouse_motion.y = event.motion.yrel / SCREEN_SIZE;
 			mouse.x = event.motion.x / SCREEN_SIZE;
-			mouse.y = event.motion.y / SCREEN_SIZE;*/
+			mouse.y = event.motion.y / SCREEN_SIZE;
 			break;
 		}
 	}
@@ -141,7 +141,7 @@ bool CModuleInput::GetWindowEvent(EventWindow ev) const
 {
 	return m_windowEvents[ev];
 }
-/*
+
 const iPoint& CModuleInput::GetMousePosition() const
 {
 	return mouse;
@@ -150,4 +150,4 @@ const iPoint& CModuleInput::GetMousePosition() const
 const iPoint& CModuleInput::GetMouseMotion() const
 {
 	return mouse_motion;
-}*/
+}

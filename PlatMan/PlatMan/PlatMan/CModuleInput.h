@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include "IModule.h"
-//#include "Point.h"
+#include "Point.h"
 
 #include "SDL/include/SDL_scancode.h"
 
@@ -35,10 +35,8 @@ public:
 	bool Init();
 	bool Start();
 
-	// Called each loop iteration
 	bool PreUpdate(float deltaTime);
 
-	// Called before quitting
 	bool CleanUp();
 
 	// Check key states (includes mouse and joy buttons)
@@ -55,14 +53,14 @@ public:
 	// Check for window events last frame
 	bool GetWindowEvent(EventWindow code) const;
 
-	// Get mouse / axis position
-	//const iPoint& GetMouseMotion() const;
-	//const iPoint& GetMousePosition() const;
+	//Get mouse / axis position
+	const iPoint& GetMouseMotion() const;
+	const iPoint& GetMousePosition() const;
 
 private:
 	bool		m_windowEvents[WE_COUNT];
 	KeyState*	m_keyboard;
 	KeyState	m_mouse_buttons[NUM_MOUSE_BUTTONS];
-	//iPoint mouse_motion;
-	//iPoint mouse;
+	iPoint mouse_motion;
+	iPoint mouse;
 };
