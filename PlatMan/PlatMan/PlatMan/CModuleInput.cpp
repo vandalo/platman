@@ -61,7 +61,7 @@ bool CModuleInput::PreUpdate(float deltaTime)
 		}
 		else
 		{
-			if (m_keyboard[i] == KEY_REPEAT || keyboard[i] == KEY_DOWN)
+			if (m_keyboard[i] == KEY_REPEAT || m_keyboard[i] == KEY_DOWN)
 				m_keyboard[i] = KEY_UP;
 			else
 				m_keyboard[i] = KEY_IDLE;
