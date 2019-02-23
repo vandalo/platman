@@ -2,14 +2,22 @@
 #include "Application.h"
 #include "CModuleInput.h"
 #include "SDL/include/SDL.h"
+#include "SDL_gamecontroller.h"
 
 #define MAX_KEYS 300
 
-CModuleInput::CModuleInput() : IModule()//, mouse({ 0, 0 }), mouse_motion({ 0,0 })
+CModuleInput::CModuleInput() : IModule()
 {
 	m_keyboard = new KeyState[MAX_KEYS];
 	memset(m_keyboard, KEY_IDLE, sizeof(KeyState) * MAX_KEYS);
 	memset(m_mouse_buttons, KEY_IDLE, sizeof(KeyState) * NUM_MOUSE_BUTTONS);
+	memset(m_gamepad_buttons, KEY_IDLE, sizeof(KeyState) * SDL_CONTROLLER_BUTTON_MAX);
+
+	SDL_Init(SDL_INIT_GAMECONTROLLER);
+
+	m_gameController = SDL_GameControllerOpen(0);
+
+
 }
 
 // Destructor
@@ -77,6 +85,15 @@ bool CModuleInput::PreUpdate(float deltaTime)
 			m_mouse_buttons[i] = KEY_IDLE;
 	}
 
+	for (int i = 0; i < SDL_CONTROLLER_BUTTON_MAX; ++i)
+	{
+		if (m_gamepad_buttons[i] == KEY_DOWN)
+			m_gamepad_buttons[i] = KEY_REPEAT;
+
+		if (m_gamepad_buttons[i] == KEY_UP)
+			m_gamepad_buttons[i] = KEY_IDLE;
+	}
+
 	while (SDL_PollEvent(&event) != 0)
 	{
 		switch (event.type)
@@ -113,11 +130,19 @@ bool CModuleInput::PreUpdate(float deltaTime)
 			m_mouse_buttons[event.button.button - 1] = KEY_UP;
 			break;
 
+		case SDL_CONTROLLERBUTTONDOWN:
+			m_gamepad_buttons[event.cbutton.button] = KEY_DOWN;
+			break;
+
+		case SDL_CONTROLLERBUTTONUP:
+			m_gamepad_buttons[event.cbutton.button - 1] = KEY_DOWN;
+			break;
+
 		case SDL_MOUSEMOTION:
-			mouse_motion.x = event.motion.xrel / SCREEN_SIZE;
-			mouse_motion.y = event.motion.yrel / SCREEN_SIZE;
-			mouse.x = event.motion.x / SCREEN_SIZE;
-			mouse.y = event.motion.y / SCREEN_SIZE;
+			m_mouseMotion.x = event.motion.xrel / SCREEN_SIZE;
+			m_mouseMotion.y = event.motion.yrel / SCREEN_SIZE;
+			m_mouse.x = event.motion.x / SCREEN_SIZE;
+			m_mouse.y = event.motion.y / SCREEN_SIZE;
 			break;
 		}
 	}
@@ -144,10 +169,10 @@ bool CModuleInput::GetWindowEvent(EventWindow ev) const
 
 const iPoint& CModuleInput::GetMousePosition() const
 {
-	return mouse;
+	return m_mouse;
 }
 
 const iPoint& CModuleInput::GetMouseMotion() const
 {
-	return mouse_motion;
+	return m_mouseMotion;
 }

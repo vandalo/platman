@@ -4,8 +4,8 @@
 
 #include "IModule.h"
 #include "Point.h"
-
-#include "SDL/include/SDL_scancode.h"
+#include <windows.h>
+#include "SDL_GameController.h"
 
 #define NUM_MOUSE_BUTTONS 5
 
@@ -47,6 +47,11 @@ public:
 		return m_keyboard[id];
 	}
 
+	KeyState GetGameControllerButton(int id) const
+	{
+		return m_gamepad_buttons[id];
+	}
+
 	KeyState GetMouseButtonDown(int id) const
 	{
 		return m_keyboard[id - 1];
@@ -60,9 +65,11 @@ public:
 	const iPoint& GetMousePosition() const;
 
 private:
-	bool		m_windowEvents[WE_COUNT];
-	KeyState*	m_keyboard;
-	KeyState	m_mouse_buttons[NUM_MOUSE_BUTTONS];
-	iPoint mouse_motion;
-	iPoint mouse;
+	bool m_windowEvents[WE_COUNT];
+	KeyState* m_keyboard;
+	KeyState m_mouse_buttons[NUM_MOUSE_BUTTONS];
+	KeyState m_gamepad_buttons[SDL_CONTROLLER_BUTTON_MAX];
+	iPoint m_mouseMotion;
+	iPoint m_mouse;
+	SDL_GameController* m_gameController;
 };

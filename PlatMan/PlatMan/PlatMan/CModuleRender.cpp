@@ -100,8 +100,8 @@ bool CModuleRender::Blit(SDL_Texture* texture, int x, int y, SDL_Rect* section)
 {
 	bool ret = true;
 	SDL_Rect rect;
-	rect.x = x;
-	rect.y = y;
+	rect.x = x + m_camera.x;
+	rect.y = y + m_camera.y;
 
 	if (section != NULL)
 	{
