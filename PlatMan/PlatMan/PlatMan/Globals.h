@@ -18,6 +18,12 @@ void log(const char file[], int line, const char* format, ...);
 #define INTERMITENT_FAST 0.3
 #define INTERMITENT_SLOW 0.5
 
+enum ScreenType
+{
+	SCREEN,
+	POPUP
+};
+
 // Useful typedefs ---------
 typedef unsigned int uint;
 

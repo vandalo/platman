@@ -2,8 +2,8 @@
 
 #include "Application.h"
 #include "CScreenManager.h"
-#include "IModuleScreen.h"
 #include "CModuleFadeToBlack.h"
+#include "IModuleScreen.h"
 
 CScreenManager::CScreenManager() :
 	m_moduleFadeToBlack(*App->GetModule<CModuleFadeToBlack>())

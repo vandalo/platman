@@ -54,8 +54,7 @@ bool CFlashScreen::Update(float deltaTime)
 
 	if (m_moduleInput.GetGameControllerButton(SDL_CONTROLLER_BUTTON_A) == KEY_DOWN)
 	{
-		CLevelTestScreen* levelTestScreen = new CLevelTestScreen(SCREEN);
-		m_screenManager.AddScreen(levelTestScreen);
+		m_screenManager.Add<CLevelTestScreen>(SCREEN);
 	}
 
 	return true;

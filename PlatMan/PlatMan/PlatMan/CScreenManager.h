@@ -21,8 +21,14 @@ public:
 	bool Update(const float deltaTime);
 	bool CleanUp();
 
-	void AddScreen(IModuleScreen* screen);
+	template<class T>
+	void Add(ScreenType type)
+	{
+		T* screen = new T(type);
+		AddScreen(screen);
+	}
 
+	void AddScreen(IModuleScreen* screen);
 
 public:
 	CModuleFadeToBlack& m_moduleFadeToBlack;

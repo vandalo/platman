@@ -4,16 +4,8 @@
 
 #include "IModule.h"
 #include "CModuleInput.h"
-#include "CScreenManager.h"
 
 #include "SDL/include/SDL.h"
-
-
-enum ScreenType
-{
-	SCREEN,
-	POPUP
-};
 
 class IModuleScreen : public IModule
 {

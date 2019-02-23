@@ -44,8 +44,7 @@ bool Application::Init()
 		ret = module.second->Start();
 	}
 
-	CFlashScreen* flashScreen = new CFlashScreen(SCREEN);
-	m_screanManager->AddScreen(flashScreen);
+	m_screanManager->Add<CFlashScreen>(SCREEN);
 
 	return ret;
 }
