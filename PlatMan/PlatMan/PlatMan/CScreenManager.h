@@ -21,20 +21,29 @@ public:
 	bool Update(const float deltaTime);
 	bool CleanUp();
 
-	template<class T>
-	void Add(ScreenType type)
-	{
-		T* screen = new T(type);
-		AddScreen(screen);
-	}
-
 	void AddScreen(IModuleScreen* screen);
+
+
 
 public:
 	CModuleFadeToBlack& m_moduleFadeToBlack;
 	std::list<IModuleScreen*> m_listScreen;
 
+	template<class T>
+	void Add(ScreenType type)
+	{
+		if (!m_swapingScreen)
+		{
+			m_swapingScreen = true;
+			T* screen = new T(type);
+			AddScreen(screen);
+		}
+
+	}
+
 private:
 	IModuleScreen* m_screenIn;
 	IModuleScreen* m_screenOut;
+
+	bool m_swapingScreen;
 };

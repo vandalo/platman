@@ -7,6 +7,9 @@
 
 CScreenManager::CScreenManager() :
 	m_moduleFadeToBlack(*App->GetModule<CModuleFadeToBlack>())
+	, m_screenIn(nullptr)
+	, m_screenOut(nullptr)
+	, m_swapingScreen(false)
 {
 }
 
@@ -38,6 +41,7 @@ bool CScreenManager::Update(const float deltaTime)
 				delete m_screenOut;
 				m_listScreen.pop_back();
 				m_listScreen.push_back(m_screenIn);
+				m_swapingScreen = false;
 			}
 		}		
 	}
@@ -65,6 +69,8 @@ void CScreenManager::AddScreen(IModuleScreen * screen)
 	}
 	else
 	{
+		m_moduleFadeToBlack.FadeToBlack(screen, nullptr, 0.0);
 		m_listScreen.push_back(screen);
+		m_swapingScreen = false;
 	}
 }
