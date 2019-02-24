@@ -4,6 +4,7 @@
 
 class CModuleRender;
 class CModuleTexture;
+class CPlayer;
 
 class CLevelTestScreen : public IModuleScreen
 {
@@ -18,4 +19,5 @@ public:
 private:
 	CModuleRender& m_moduleRender;
 	CModuleTexture& m_moduleTexture;
+	CPlayer* m_player;
 };
