@@ -135,7 +135,7 @@ bool CModuleInput::PreUpdate(float deltaTime)
 			break;
 
 		case SDL_CONTROLLERBUTTONUP:
-			m_gamepad_buttons[event.cbutton.button - 1] = KEY_DOWN;
+			m_gamepad_buttons[event.cbutton.button - 1] = KEY_UP;
 			break;
 
 		case SDL_MOUSEMOTION:

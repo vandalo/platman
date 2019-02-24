@@ -19,7 +19,7 @@ CLevelTestScreen::~CLevelTestScreen()
 
 bool CLevelTestScreen::Init()
 {
-	LOG("Loading space intro");
+	LOG("Loading Test intro");
 	return true;
 }
 
@@ -30,6 +30,6 @@ bool CLevelTestScreen::Update(float deltaTime)
 
 bool CLevelTestScreen::CleanUp()
 {
-	LOG("Unloading space scene");
+	LOG("Unloading Test scene");
 	return true;
 }

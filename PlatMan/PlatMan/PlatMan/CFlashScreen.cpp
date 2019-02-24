@@ -6,6 +6,7 @@
 #include "CModuleRender.h"
 #include "CScreenManager.h"
 #include "CLevelTestScreen.h"
+#include "CPauseScreen.h"
 
 CFlashScreen::CFlashScreen(ScreenType screenType) :
 	IModuleScreen(screenType)
@@ -20,7 +21,7 @@ CFlashScreen::~CFlashScreen()
 
 bool CFlashScreen::Init()
 {
-	LOG("Loading space intro");
+	LOG("Loading Flash intro");
 	m_background = m_moduleTexture.Load("sprites/backgrounds.png");
 	m_moduleRender.m_camera.x = m_moduleRender.m_camera.y = 50;
 	return true;
@@ -28,13 +29,6 @@ bool CFlashScreen::Init()
 
 bool CFlashScreen::Update(float deltaTime)
 {
-	m_moduleRender.Blit(m_background, 0, 0);
-
-	if (m_moduleInput.GetKey(SDL_SCANCODE_RETURN) == KEY_DOWN)
-	{
-		
-	}
-
 	////////////////////////
 	//To debug move camera//
 	////////////////////////
@@ -57,11 +51,22 @@ bool CFlashScreen::Update(float deltaTime)
 		m_screenManager.Add<CLevelTestScreen>(SCREEN);
 	}
 
+	if (m_moduleInput.GetGameControllerButton(SDL_CONTROLLER_BUTTON_B) == KEY_DOWN)
+	{
+		m_screenManager.Add<CPauseScreen>(POPUP);
+	}
+
+	return true;
+}
+
+bool CFlashScreen::PostUpdate(float deltaTime)
+{
+	m_moduleRender.Blit(m_background, 0, 0);
 	return true;
 }
 
 bool CFlashScreen::CleanUp()
 {
-	LOG("Unloading space scene");
+	LOG("Unloading Flash scene");
 	return true;
 }

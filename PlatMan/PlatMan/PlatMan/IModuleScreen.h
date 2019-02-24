@@ -22,10 +22,13 @@ public:
 	bool CleanUp() override { return true; };
 	ScreenType GetScreenType() { return m_screenType; };
 
-
-public:
-
 protected:
+	bool Close()
+	{
+		return m_screenManager.CloseScreen();
+	};
+
+
 	CModuleInput& m_moduleInput;
 	CScreenManager& m_screenManager;
 	ScreenType m_screenType;

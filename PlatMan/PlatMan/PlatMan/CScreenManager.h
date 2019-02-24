@@ -18,8 +18,10 @@ public:
 	~CScreenManager();
 
 	bool Init();
-	bool Update(const float deltaTime);
+	bool Update(float deltaTime);
+	bool PostUpdate(float deltaTime);
 	bool CleanUp();
+	bool CloseScreen();
 
 	void AddScreen(IModuleScreen* screen);
 
@@ -42,6 +44,8 @@ public:
 	}
 
 private:
+	void FadingOut();
+
 	IModuleScreen* m_screenIn;
 	IModuleScreen* m_screenOut;
 

@@ -67,6 +67,7 @@ bool Application::Update()
 		if (m_screanManager)
 		{
 			m_screanManager->Update(deltaTime);
+			m_screanManager->PostUpdate(deltaTime);
 		}
 
 		for (auto& module : m_modules)
