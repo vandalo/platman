@@ -5,245 +5,284 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="MainHeaders">
+    <Filter Include="Main\Core Modules">
+      <UniqueIdentifier>{29111309-7334-49ec-ab03-7e699c33d61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Core Modules\Headers">
+      <UniqueIdentifier>{57b4c0d7-c389-4dba-9c4f-42c886ad2cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Core Modules\Source">
+      <UniqueIdentifier>{323b44a2-05a6-4bf4-81e2-3fafb4735342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\MainHeaders">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Core Modules">
-      <UniqueIdentifier>{29111309-7334-49ec-ab03-7e699c33d61a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utils">
+    <Filter Include="Main\Utils">
       <UniqueIdentifier>{c3e281dc-2908-4ddf-90c9-00ca4c4f2ce9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core Modules\Headers">
-      <UniqueIdentifier>{57b4c0d7-c389-4dba-9c4f-42c886ad2cb9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core Modules\Source">
-      <UniqueIdentifier>{323b44a2-05a6-4bf4-81e2-3fafb4735342}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Utils\Maths">
+    <Filter Include="Main\Utils\Maths">
       <UniqueIdentifier>{04e81fff-6c8c-4696-b870-3ad840974585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{88e0a356-bdd3-4e93-8c21-81af9f87bad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameHeaders">
+      <UniqueIdentifier>{7076ea3f-4666-41ba-ae56-56dc5a45d873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameSource">
+      <UniqueIdentifier>{934f8dcc-687b-4360-8e9a-6108dadcbbed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameHeaders\LevelTest">
+      <UniqueIdentifier>{b6884e69-4e90-401b-b8e5-0436fe466bf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameSource\LevelTest">
+      <UniqueIdentifier>{f19b935a-fd00-45cb-9232-1000d3ab996d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameHeaders\Player">
+      <UniqueIdentifier>{94beedf6-e736-4342-aa6f-5c2d1083a855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\GameSource\Player">
+      <UniqueIdentifier>{4e8c147b-c22a-4660-a980-5ce75311cf36}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>MainHeaders</Filter>
+      <Filter>Main\MainHeaders</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>MainHeaders</Filter>
+      <Filter>Main\MainHeaders</Filter>
     </ClInclude>
     <ClInclude Include="Log.h">
-      <Filter>Utils</Filter>
+      <Filter>Main\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Globals.h">
-      <Filter>Utils</Filter>
+      <Filter>Main\Utils</Filter>
     </ClInclude>
     <ClInclude Include="CHash.h">
-      <Filter>Utils</Filter>
+      <Filter>Main\Utils</Filter>
     </ClInclude>
     <ClInclude Include="CModuleWindow.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="CModuleRender.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Algorithm\Random\LCG.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\AABB.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\AABB2D.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Capsule.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Circle.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Frustum.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\GeometryAll.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\GeomType.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\HitInfo.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\KDTree.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Line.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\LineSegment.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\OBB.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\PBVolume.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Plane.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Polygon.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Polyhedron.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\QuadTree.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Ray.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Sphere.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\Triangle.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Geometry\TriangleMesh.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\assume.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\BitOps.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\Complex.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\CoordinateAxisConvention.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\FixedPoint.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float2.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float3.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float3x3.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float3x4.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4x4.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4x4_neon.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4x4_sse.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4_neon.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\float4_sse.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\FloatCmp.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathAll.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathConstants.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathFunc.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathLog.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathNamespace.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MathTypes.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\MatrixProxy.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\myassert.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\Polynomial.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\Quat.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\quat_simd.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\Rect.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\Reinterpret.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\SSEMath.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\sse_mathfun.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Math\TransformOps.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\MathBuildConfig.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\MathGeoLib.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\MathGeoLibFwd.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="MathGeoLib\src\Time\Clock.h">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClInclude>
     <ClInclude Include="Color.h">
-      <Filter>Utils</Filter>
+      <Filter>Main\Utils</Filter>
     </ClInclude>
     <ClInclude Include="IModule.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Animation.h">
-      <Filter>Utils</Filter>
+      <Filter>Main\Utils</Filter>
     </ClInclude>
     <ClInclude Include="CModuleTexture.h">
-      <Filter>Core Modules\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="CScreanManager.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="IModuleScreen.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="CFlashScreen.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
     <ClInclude Include="CModuleInput.h">
-      <Filter>Core Modules\Headers</Filter>
+      <Filter>Main\Core Modules\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Main\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CModuleFadeToBlack.h">
+      <Filter>Main\Core Modules\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CScreenManager.h">
+      <Filter>Main\Core Modules\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevelTestScreen.h">
+      <Filter>Game\GameHeaders\LevelTest</Filter>
+    </ClInclude>
+    <ClInclude Include="CPauseScreen.h">
+      <Filter>Game\GameHeaders\LevelTest</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Game\GameHeaders\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameObject.h">
+      <Filter>Main\Core Modules\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -254,135 +293,147 @@
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="CModuleWindow.cpp">
-      <Filter>Core Modules\Source</Filter>
+      <Filter>Main\Core Modules\Source</Filter>
     </ClCompile>
     <ClCompile Include="CModuleRender.cpp">
-      <Filter>Core Modules\Source</Filter>
+      <Filter>Main\Core Modules\Source</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Algorithm\Random\LCG.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\AABB.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Capsule.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Circle.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Frustum.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Line.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\LineSegment.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\OBB.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Plane.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Polygon.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Polyhedron.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Ray.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Sphere.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\Triangle.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Geometry\TriangleMesh.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\BitOps.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float2.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float3.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float3x3.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float3x4.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float4.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\float4x4.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\MathFunc.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\MathLog.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\MathOps.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\Polynomial.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\Quat.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\SSEMath.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Math\TransformOps.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="MathGeoLib\src\Time\Clock.cpp">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Main</Filter>
     </ClCompile>
     <ClCompile Include="CModuleTexture.cpp">
-      <Filter>Core Modules\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="CScreanManager.cpp">
-      <Filter>Core Modules\Source</Filter>
+      <Filter>Main\Core Modules\Source</Filter>
     </ClCompile>
     <ClCompile Include="CFlashScreen.cpp">
-      <Filter>Core Modules\Source</Filter>
+      <Filter>Main\Core Modules\Source</Filter>
     </ClCompile>
     <ClCompile Include="CModuleInput.cpp">
-      <Filter>Core Modules\Source</Filter>
+      <Filter>Main\Core Modules\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CModuleFadeToBlack.cpp">
+      <Filter>Main\Core Modules\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CScreenManager.cpp">
+      <Filter>Main\Core Modules\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CLevelTestScreen.cpp">
+      <Filter>Game\GameSource\LevelTest</Filter>
+    </ClCompile>
+    <ClCompile Include="CPauseScreen.cpp">
+      <Filter>Game\GameSource\LevelTest</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Game\GameSource\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="MathGeoLib\src\Geometry\KDTree.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
     <None Include="MathGeoLib\src\Geometry\QuadTree.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
     <None Include="MathGeoLib\src\Geometry\TriangleMesh_IntersectRay_AVX.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
     <None Include="MathGeoLib\src\Geometry\TriangleMesh_IntersectRay_CPP.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
     <None Include="MathGeoLib\src\Geometry\TriangleMesh_IntersectRay_SSE.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
     <None Include="MathGeoLib\src\Math\Matrix.inl">
-      <Filter>Utils\Maths</Filter>
+      <Filter>Main\Utils\Maths</Filter>
     </None>
   </ItemGroup>
 </Project>
